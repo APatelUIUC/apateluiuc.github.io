@@ -1,0 +1,21 @@
+{
+  "name": "global-harvest-atlas",
+  "version": "1.0.0",
+  "description": "Static data story visualising global staple crops and protein consumption",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "data-visualisation",
+    "typescript",
+    "agriculture",
+    "nutrition"
+  ],
+  "author": "Data Storytelling Lab",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

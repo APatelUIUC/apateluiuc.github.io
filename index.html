@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="atlas">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Harvest Atlas — Exploring the World's Staple Diets</title>
+    <meta
+      name="description"
+      content="An interactive atlas visualizing how staple crops and protein preferences have evolved across the globe."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="global-backdrop" aria-hidden="true"></div>
+    <header class="hero" id="top">
+      <div class="hero__inner">
+        <div class="hero__meta">
+          <span class="hero__eyebrow">Immersive Data Storytelling</span>
+          <button id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+            <span class="icon icon-sun"></span>
+            <span class="icon icon-moon"></span>
+          </button>
+        </div>
+        <h1>
+          Global Harvest Atlas
+          <span class="hero__subtitle">How the world grows its calories and chooses its proteins.</span>
+        </h1>
+        <p class="hero__lead">
+          Follow the shifting geography of staple crops and meat consumption from 1990 to 2020. Scroll, scrub, and hover to see
+          which countries shaped the global pantry—and how dietary transitions ripple across continents.
+        </p>
+        <div class="hero__cta">
+          <a class="primary" href="#atlas">Start exploring</a>
+          <a class="ghost" href="#methodology">Read the methodology</a>
+        </div>
+      </div>
+      <div class="hero__globe" aria-hidden="true">
+        <div class="globe"></div>
+        <div class="globe__orbit globe__orbit--one"></div>
+        <div class="globe__orbit globe__orbit--two"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--intro" id="atlas">
+        <div class="section__header">
+          <h2>The Planet's Pantry in Three Snapshots</h2>
+          <p>
+            Humanity leans on a handful of staple crops, yet their production is unequally distributed. These key moments highlight
+            how output and diets have diversified—or concentrated—over the last three decades.
+          </p>
+        </div>
+        <div class="insight-grid" id="insight-grid"></div>
+      </section>
+
+      <section class="section section--map" aria-labelledby="map-heading">
+        <div class="section__header">
+          <h2 id="map-heading">Crop Powerhouses, Year by Year</h2>
+          <p>
+            Drag the timeline to reveal how six nations shaped the supply of wheat, rice, and maize. Bubble size reflects combined
+            production, while color indicates the dominant staple.
+          </p>
+        </div>
+        <div class="map-panel">
+          <div class="map-panel__viz fade-in">
+            <svg id="world-map" viewBox="0 0 1200 650" role="img" aria-labelledby="map-heading"></svg>
+            <div class="timeline">
+              <label for="year-range">Year</label>
+              <input type="range" id="year-range" min="0" max="0" step="1" value="0" aria-live="polite" />
+              <div class="timeline__ticks" id="timeline-ticks"></div>
+            </div>
+          </div>
+          <aside class="map-panel__details fade-in" id="map-details" aria-live="polite"></aside>
+        </div>
+      </section>
+
+      <section class="section section--charts" aria-labelledby="charts-heading">
+        <div class="section__header">
+          <h2 id="charts-heading">From Fields to Plates</h2>
+          <p>
+            Harvest volumes and protein choices do not evolve in isolation. Compare how global staple output stacks up against per
+            capita meat consumption to understand who is shifting diets fastest.
+          </p>
+        </div>
+        <div class="chart-grid">
+          <figure class="chart-card fade-in">
+            <header>
+              <h3>Stacked staple output</h3>
+              <span class="chart-card__meta">Million tonnes of crop harvest</span>
+            </header>
+            <svg id="staple-chart" viewBox="0 0 760 420" role="img" aria-label="Stacked area chart of staple crops"></svg>
+            <figcaption>
+              Wheat, rice, and maize account for more than half of all plant calories consumed. Asia's rise in rice and maize has
+              reshaped the balance.
+            </figcaption>
+          </figure>
+          <figure class="chart-card fade-in">
+            <header>
+              <h3>Protein preference shift</h3>
+              <span class="chart-card__meta">Kilograms of meat per person</span>
+            </header>
+            <svg id="protein-chart" viewBox="0 0 760 420" role="img" aria-label="Line chart of meat consumption"></svg>
+            <figcaption>
+              Dietary transitions accelerate after 2000: China's per capita meat intake quadruples, while India remains primarily
+              vegetarian.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--insights" aria-labelledby="insights-heading">
+        <div class="section__header">
+          <h2 id="insights-heading">Patterns Beneath the Surface</h2>
+          <p>
+            Production footprints, trade relationships, and cultural preferences intertwine. Hover over the insights to uncover
+            the supporting data points.
+          </p>
+        </div>
+        <div class="insight-cards" id="insight-cards"></div>
+      </section>
+
+      <section class="section section--methodology" id="methodology">
+        <div class="section__header">
+          <h2>Methodology &amp; Sources</h2>
+        </div>
+        <div class="methodology">
+          <p>
+            Figures combine FAO production data (1990–2020) and OECD dietary surveys synthesized into a storytelling dataset. Crop
+            values reflect harvest tonnage of wheat, rice, and maize—the trio supplying most of the world's calories. Protein
+            figures depict per capita meat availability, a proxy for consumption.
+          </p>
+          <p>
+            All calculations are smoothed for clarity while preserving relative rankings. Geographic coordinates anchor each
+            spotlight country within a stylized equirectangular projection. Colors follow a perceptually uniform palette tuned for
+            dark and light modes.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <p>Crafted as an exploration of immersive data storytelling.</p>
+        <a href="#top" class="footer__back">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+  </body>
+</html>
