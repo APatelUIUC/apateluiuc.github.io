@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aurora">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aryan Patel — Creative Technologist</title>
+    <meta
+      name="description"
+      content="The personal playground of Aryan Patel — creative technologist, storyteller, and community builder."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gradient-overlay"></div>
+    <header class="hero">
+      <div class="hero__content">
+        <div class="hero__meta">
+          <span class="hero__tag">Welcome, voyager</span>
+          <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+            <span class="icon icon-sun"></span>
+            <span class="icon icon-moon"></span>
+          </button>
+        </div>
+        <h1>
+          Hi, I'm <span class="highlight" data-highlight="engineer">Aryan Patel</span>
+        </h1>
+        <p class="lead">
+          I design and build luminous experiences that make complex ideas feel intuitive. My work spans developer tooling,
+          research, and storytelling for curious communities.
+        </p>
+        <div class="hero__cta">
+          <a class="primary" href="#projects">Explore my work</a>
+          <a class="ghost" href="mailto:aryan@illinois.edu">Start a conversation</a>
+        </div>
+      </div>
+      <div class="hero__orbital" aria-hidden="true">
+        <div class="orbital orbital--one"></div>
+        <div class="orbital orbital--two"></div>
+        <div class="orbital orbital--three"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="spotlight">
+        <div class="section__header">
+          <h2>Spotlight</h2>
+          <p>How I show up for teams, products, and the people behind them.</p>
+        </div>
+        <div id="spotlight-grid" class="spotlight-grid"></div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section__header">
+          <h2>Signature Projects</h2>
+          <p>Moments that taught me the most about building joyful, inclusive products.</p>
+        </div>
+        <div class="project-gallery">
+          <article class="project-card">
+            <span class="project-badge">2024</span>
+            <h3>Composer</h3>
+            <p>
+              A visual scripting environment that empowers engineers to orchestrate complex data workflows. Reduced onboarding
+              time by 60% through playful tutorials and ambient guidance.
+            </p>
+            <ul>
+              <li>Interactive canvas with multiplayer presence</li>
+              <li>Context-aware command palette for power users</li>
+              <li>Accessible color system with adaptive contrast</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <span class="project-badge">2023</span>
+            <h3>Northstar Atlas</h3>
+            <p>
+              A storytelling microsite that visualizes climate resilience initiatives. Brought together policy experts and civic
+              technologists through a shared, immersive narrative.
+            </p>
+            <ul>
+              <li>3D globe journeys rendered directly in the browser</li>
+              <li>Figma-to-production design system in three weeks</li>
+              <li>Inclusive language reviews with community partners</li>
+            </ul>
+          </article>
+          <article class="project-card">
+            <span class="project-badge">2022</span>
+            <h3>Studio 217</h3>
+            <p>
+              A community for students to build creative confidence. Hosted maker nights, published design zines, and mentored
+              dozens of emerging technologists.
+            </p>
+            <ul>
+              <li>Spin-up incubator with project-based curriculum</li>
+              <li>Partnerships with nonprofits and local artists</li>
+              <li>Annual showcase celebrating student-led impact</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--contrast" id="journey">
+        <div class="section__header">
+          <h2>The Journey</h2>
+          <p>A constellation of milestones that shape the way I think about craft.</p>
+        </div>
+        <div id="journey-timeline" class="journey-timeline"></div>
+      </section>
+
+      <section class="section" id="playground">
+        <div class="section__header">
+          <h2>Lab Notes</h2>
+          <p>Curiosities, experiments, and essays I'm noodling on.</p>
+        </div>
+        <div class="lab-grid">
+          <article class="lab-card">
+            <h3>Designing with orchestration</h3>
+            <p>How spatial interfaces help teams choreograph complex automation with empathy.</p>
+            <span class="lab-meta">Essay &middot; In progress</span>
+          </article>
+          <article class="lab-card">
+            <h3>Interfaces for collective memory</h3>
+            <p>Capturing tacit knowledge with lightweight rituals and delightful prompts.</p>
+            <span class="lab-meta">Workshop &middot; Seeking collaborators</span>
+          </article>
+          <article class="lab-card">
+            <h3>Open source residency</h3>
+            <p>An invitation to pair on tools that make creative coding more playful.</p>
+            <span class="lab-meta">Program &middot; Summer 2025</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <p>Let's make something luminous together.</p>
+        <div id="social-links" class="social-links"></div>
+        <small>&copy; <span id="year">2025</span> Aryan Patel. Crafted with curiosity in Illinois.</small>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear().toString();
+    </script>
+  </body>
+</html>
