@@ -1,17 +1,18 @@
 {
-  "name": "apateluiuc-github-pages",
+  "name": "global-harvest-atlas",
   "version": "1.0.0",
-  "description": "Personal site for Aryan Patel",
+  "description": "Static data story visualising global staple crops and protein consumption",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch"
   },
   "keywords": [
-    "portfolio",
+    "data-visualisation",
     "typescript",
-    "design"
+    "agriculture",
+    "nutrition"
   ],
-  "author": "Aryan Patel",
+  "author": "Data Storytelling Lab",
   "license": "MIT",
   "type": "module",
   "devDependencies": {

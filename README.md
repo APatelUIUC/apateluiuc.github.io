@@ -1,13 +1,13 @@
-# Aryan Patel — Personal Site
+# Global Harvest Atlas
 
-A single-page, aurora-inspired portfolio for Aryan Patel's GitHub Pages site. Built with TypeScript for the interactive elements and vanilla CSS for a fully static, deploy-anywhere experience.
+A single-page, data-driven story exploring how staple crops and protein preferences have shifted around the world from 1990 to 2020. The experience is fully static, powered by TypeScript-rendered SVGs and expressive CSS to make a GitHub Pages deployment effortless.
 
-## Features
+## Highlights
 
-- **Dynamic theming** with a persistent aurora ↔ midnight toggle that respects system preferences.
-- **Data-driven rendering** of spotlight cards, journey milestones, and social links through TypeScript modules.
-- **Playful interactions** including pointer-based parallax, magnetic card tilts, and rotating highlight text.
-- **Responsive layout** tuned for devices from mobile to large desktop displays without external frameworks.
+- **Immersive hero experience** with layered gradients, animated globe motifs, and a twilight-ready theme toggle.
+- **Interactive crop atlas** featuring a stylised world map, timeline scrubber, and responsive detail panel for six spotlight countries.
+- **Custom charts without dependencies** – stacked area and multi-series line charts are rendered in SVG directly from TypeScript data structures.
+- **Narrative insight cards** that fade into view as you scroll, reinforcing key takeaways and providing editorial context.
 
 ## Development
 
@@ -25,5 +25,4 @@ A single-page, aurora-inspired portfolio for Aryan Patel's GitHub Pages site. Bu
 
    The compiled JavaScript is emitted to `scripts/` for direct use by `index.html`.
 
-3. Open `index.html` in your browser or serve the directory with your favorite static server.
-
+3. Open `index.html` in your browser or serve the directory with any static file server to explore the atlas locally.
